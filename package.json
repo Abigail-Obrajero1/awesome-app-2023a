@@ -1,0 +1,34 @@
+{
+  "name": "awesome-app-2023a",
+  "version": "0.0.0",
+  "description": "App for learning ExpressJs",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abigail-Obrajero1/awesome-app-2023a.git"
+  },
+  "engines": {
+    "node": "20.0.0",
+    "npm": "9.6.4"
+  },
+  "keywords": [
+    "Express",
+    "ITGAM",
+    "DWPCI",
+    "Javascript"
+  ],
+  "author": "abigailobrajero@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Abigail-Obrajero1/awesome-app-2023a/issues"
+  },
+  "homepage": "https://github.com/Abigail-Obrajero1/awesome-app-2023a#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
