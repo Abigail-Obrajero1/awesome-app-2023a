@@ -1,5 +1,5 @@
 // Importar el modulo http
-import http from 'http';
+//import http from 'http';
 
 // Importar express
 import express from 'express';
@@ -24,14 +24,14 @@ app.use((req, res, next) => {
 });
 
 // Creando el servidor
-const server = http.createServer(app);
+//const server = http.createServer(app);
 
 // Definir puertos
 const port = 3000;
 const ip = "0.0.0.0";
 
 // Arrancar el servidor 
-server.listen(port, ip, (error) => {
+app.listen(port, ip, (error) => {
     console.log("📢 Sirviendo en http://localhost:3000");
     // En codespaces
     //console.log("📢 Sirviendo en ${process.env.IP}:${process.env.IP}");
