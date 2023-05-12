@@ -6,6 +6,7 @@ import express from 'express';
 
 // Crear una instancia de express
 const app = express(); // (req,res) => {UN MONTON DE CÓDIGO}
+
 app.use((req, res, next) => {
     console.log("😎 Ejecutando el middleware 1");
     // Incovando el siguiente Middleware
@@ -14,6 +15,13 @@ app.use((req, res, next) => {
 app.use((req, res, next) => {
     console.log(`${req.method}-${req.url}`);
     next();
+});
+// Middleware de proposito especifico
+app.use('/about', (req, res) => {
+    res.send(`
+    <h1 style="color: teal">About.....</h1>
+    <p style="color: #555">Esta es una página paa aprender desarrollo web en Fullstack con JS</p>
+    `);
 });
 app.use((req, res, next) => {
     console.log("👀 Respondiendo al cliente");
