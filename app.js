@@ -27,8 +27,7 @@ app.use('/about', (req, res) => {
     `);
 });
 // GET /add-product 
-app.use('/add-product', (req, res, next) => {
-    if (req.method === "POST") return next();
+app.get('/add-product', (req, res, next) => {
     // Sirviendo el formulario
     console.log("SIRVIENDO EL FORMULARIO");
     res.send(`
@@ -42,7 +41,7 @@ app.use('/add-product', (req, res, next) => {
     `);
 });
 // POST /add-product
-app.use('/add-product', (req, res) => {
+app.post('/add-product', (req, res) => {
     // Realizando extracción de los datos 
     // en la petición
     for (const prop in req.body) {
