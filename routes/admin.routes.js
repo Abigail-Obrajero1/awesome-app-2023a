@@ -7,7 +7,7 @@ const router = Router();
 // Importando el gestor de rutas
 import path from 'path';
 
-// GET /add-product
+// GET /admin/add-product
 router.get('/add-product', (req, res, next) => {
   // Si la petición es post pasamos el siguiente
   // Middleware
@@ -18,7 +18,7 @@ router.get('/add-product', (req, res, next) => {
   res.sendFile(path.resolve('views', 'add-product.html'));
 });
 
-// POST /add-product
+// POST /admin/add-product
 router.post('/add-product', (req, res) => {
   // Realizaremos la extracción de
   // parametros dentro de la peticion

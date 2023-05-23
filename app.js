@@ -16,7 +16,7 @@ const app = express(); // (req,res) => {UN MONTON DE CÓDIGO}
 app.use(express.urlencoded({ extended: true }));
 
 // Se agrega ruta de administrador
-app.use(adminRouter);
+app.use('/admin', adminRouter);
 // Se agrega la ruta shop 
 app.use(shopRouter);
 // Registrando middleware para el error 404
