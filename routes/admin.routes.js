@@ -6,6 +6,8 @@ const router = Router();
 
 // Importando el gestor de rutas
 import path from 'path';
+// Importando ROOT_DIR 
+import { ROOT_DIR } from '../helpers/paths.js';
 
 // GET /admin/add-product
 router.get('/add-product', (req, res, next) => {
@@ -15,7 +17,9 @@ router.get('/add-product', (req, res, next) => {
   // Servimos el formulario
   console.log("📢 Sirviendo formulario...");
   // Se contesta al server
-  res.sendFile(path.resolve('views', 'add-product.html'));
+  console.log(`ROOT_DIR:${ROOT_DIR}`);
+  // join resuelve tramos de ruta 
+  res.sendFile(path.join(ROOT_DIR, 'views', 'add-product.html'));
 });
 
 // POST /admin/add-product
