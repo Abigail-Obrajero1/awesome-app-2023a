@@ -3,6 +3,8 @@ import { Router } from 'express';
 
 // Creando una instancia del enrutador de express
 const router = Router();
+// Creando datos en la memoria volatil
+export const products = [];
 
 // Importando el gestor de rutas
 import path from 'path';
@@ -24,9 +26,12 @@ router.get('/add-product', (req, res, next) => {
 
 // POST /admin/add-product
 router.post('/add-product', (req, res) => {
-  // Realizaremos la extracción de
-  // parametros dentro de la peticion
-  console.log(req.body);
+  // Realizaremos la desestructuración de 
+  // 'name' de la petición
+  const { title } = req.body;
+  // Agregamos el dato en la base de datos
+  products.push(title);
+  // Redireccionando
   res.redirect('/');
 });
 
