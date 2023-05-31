@@ -7,16 +7,12 @@ import path from 'path';
 // Creando una instancia del enrutador de express
 const router = Router();
 
-// Importando productos
-import { products } from './admin.routes.js';
-
 // GET /
 router.get('/', (req, res) => {
-    // Mostrando productos en memoria
-    console.log(products);
     console.log("📢 Sirviendo la ruta '/'");
     // Se contesta al server
-    res.sendFile(path.resolve('views', 'shop.html'));
+    res.render('shop');
+    // res.render('shop', { layout: false });
 });
 
 // GET /about

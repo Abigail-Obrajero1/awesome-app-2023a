@@ -1,2 +1,2 @@
-# awesome-app-2023a
-Proyecto de aprendizaje de express.js
+# dwpcI-awesome-app
+Proyecto para aprender Express en la materia de DWPC-I

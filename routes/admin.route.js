@@ -1,26 +1,19 @@
 // Importando el enrutador de express
 import { Router } from 'express';
-// import path 
+// Importando el gestor de rutas
 import path from 'path';
-
-// importado ROOT_DIR
 import { ROOT_DIR } from '../helpers/paths.js';
 
 // Creando una instancia del enrutador de express
 const router = Router();
 
-
-// Creando datos en la memorian volatil
+// Datos en memoria volatil
 export const products = [];
-
 
 // GET /admin/add-product
 router.get('/add-product', (req, res, next) => {
   // Servimos el formulario
   console.log("📢 Sirviendo formulario...");
-
-  console.log(`ROOT_DIR: ${ROOT_DIR}`);
-  // res.render('add-product', { layout: false });
   res.render('add-product');
 });
 
